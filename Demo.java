@@ -1,6 +1,9 @@
- class Demo1{
-public static void main(String args[])
-{
-System.out.println("Hello PG_DAC Feb25, Mumbai..!!!");
-}
+class Demo{
+	public static void main(String args[]){
+	System.out.println("Welcom to CDAC Juhu");
+	System.out.printf("Good");
+	System.out.printf("Morning");
+	System.out.println("Shital, Plz Ask Question");
+	
+	}
 }
