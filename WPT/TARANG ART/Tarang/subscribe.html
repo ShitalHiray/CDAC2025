@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscribe - Blooming Beauty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff0f5;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h2 {
+      color: #ff69b4;
+    }
+
+    input {
+      width: 90%;
+      max-width: 400px;
+      padding: 12px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Subscribe to Blooming Beauty</h2>
+
+  <!-- Wrap in a form tag to handle submission -->
+  <form id="subscribe-form">
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <script>
+    // Handle the form submission
+    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+
+      if (name && email) {
+        // For now, just alert the user with their input. 
+        // You can add AJAX here to send data to the server.
+        alert(`Thank you for subscribing, ${name}! We will send updates to ${email}.`);
+      } else {
+        alert('Please fill in both fields.');
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery - Blooming Beauty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffe4f1;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      color: #ff69b4;
+      padding-top: 50px;
+    }
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .gallery-item {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .gallery-item img {
+      width: 100%;  /* Make the image fill the container */
+      height: 200px;  /* Set a fixed height for uniformity */
+      object-fit: cover;  /* Ensure images maintain their aspect ratio without distortion */
+      display: block;
+    }
+    .gallery-item h3 {
+      color: #ff69b4;
+      padding: 10px;
+      margin: 0;
+    }
+    .gallery-item p {
+      font-size: 16px;
+      color: #555;
+      padding: 0 10px 10px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #fff;
+      background: #ff69b4;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    a:hover {
+      background: #ff1493;
+    }
+    footer {
+      margin-top: 170px;
+      background: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Gallery</h1>
+  
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="images.jpg" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="hair1.jpeg" alt="Image 2">
+    </div>
+    <div class="gallery-item">
+      <img src="asseseries.jpg" alt="Image 3">
+    </div>
+    <div class="gallery-item">
+      <img src="OIP.jpg" alt="Image 4">
+    </div>
+    <div class="gallery-item">
+      <img src="skin.jpg" alt="Image 5">
+    </div>
+    <div class="gallery-item">
+      <img src="download.jpg" alt="Image 6">
+    </div>
+    <div class="gallery-item">
+        <img src="hair2.jpeg" alt="Image 6">
+      </div>
+      <div class="gallery-item">
+        <img src="skinc.jpg" alt="Image 6">
+      </div>
+      <div class="gallery-item">
+        <img src="haircareimgjpg.jpg" alt="Image 6">
+      </div>
+      <div class="gallery-item">
+        <img src="makeup.jpg" alt="Image 6">
+      </div>
+  </div>
+  <a href="Tarangart.html">← Back to Home</a>
+  </section>
+  <footer>
+    <p>&copy; 2025 🎀 Blooming Beauty 🎀 | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

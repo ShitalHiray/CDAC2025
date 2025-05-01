@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Blooming Beauty</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fce4ec;
+      text-align: center;
+      padding: 40px;
+    }
+    h2 {
+      color: #ff69b4;
+    }
+    input {
+      width: 90%;
+      max-width: 400px;
+      padding: 12px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 12px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff1493;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #ff69b4;
+    }
+  </style>
+</head>
+<body>
+  <h2>Sign Up</h2>
+  <form onsubmit="signUp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Register</button>
+  </form>
+  <a href="signin.html">Already have an account? Sign In</a><br>
+  <a href="subscribe.html">← Back to Subscribe</a>
+  <a href="Tarangart.html" class="button">← Back to Home</a>
+
+  <script>
+    function signUp() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      // Add sign-up logic (validation, sending data to server, etc.)
+      alert('Registration successful!'); // Replace with actual sign-up logic
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2025 🎀 Blooming Beauty 🎀 | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

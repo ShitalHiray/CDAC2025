@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🎀🌸 Blooming Beauty 🎀🌸</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/263/263115.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffe4f1;
+      /* soft pink */
+      color: #333;
+    }
+
+    header {
+      background: #ff69b4;
+      /* hot pink */
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo-img {
+      width: 60px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+      border: 2px solid #deb51f;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo span {
+      font-family: 'Pacifico', cursive;
+      font-size: 30px;
+      margin: 0 5px;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd1dc;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    marquee {
+      background: #ff85c1;
+      color: white;
+      font-size: 20px;
+      padding: 8px;
+      margin-top: 90px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 80px 20px 20px;
+      text-align: center;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      /* Space between boxes */
+      flex-wrap: wrap;
+      /* Optional: wrap to next line if screen too small */
+      margin-top: 40px;
+    }
+
+    .category {
+      width: 200px;
+      /* Set a fixed width */
+      height: 200px;
+      /* Set a fixed height */
+      background: #ffe0f0;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: background 0.4s ease, transform 0.4s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .category:hover {
+      background: linear-gradient(135deg, #ff9ebc, #ffccd9);
+      transform: translateY(-8px) scale(1.05);
+    }
+
+    .category img {
+      width: 80px;
+      height: 80px;
+    }
+
+    footer {
+      margin-top: 170px;
+      background: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    /* Popup Form Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .popup h2 {
+      margin-bottom: 15px;
+      color: #ff69b4;
+    }
+
+    .popup input,
+    .popup textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .popup button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .popup button:hover {
+      background: #ff1493;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background-color: #ff69b4;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        display: none;
+        padding: 20px;
+        border-radius: 10px 0 0 10px;
+      }
+
+      .show-menu {
+        display: flex !important;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="BeautyBoxlogo.jpeg" alt="BeautyBox Logo" class="logo-img">
+      <span>Blooming Beauty</span>
+    </div>
+    <nav>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <ul id="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="subscribe.html">Subscribe</a></li>
+       <li><a href="signup.html">Sign Up</a></li> 
+        <li><a href="signin.html">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <marquee>🌸🎀 Welcome to Blooming Beauty! New Launch Offers Available! 🎀🌸</marquee>
+
+  <section>
+    <h1>Shop by Categories</h1>
+    <div class="categories">
+
+      <div class="category">
+        <img src="skinimage.jpeg" alt="Top Decoration" style="width:100%; height:auto; border-radius:10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/2917/2917991.png" alt="Skincare">
+        <h3>Skincare</h3>
+      </div>
+      <div class="category">
+        <img src="haircareimgjpg.jpg" alt="Top Decoration" style="width:100%; height:auto; border-radius:10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/3461/3461574.png" alt="Haircare">
+        <h3>Haircare</h3>
+      </div>
+      <div class="category">
+        <img src="makeups.jpg" alt="Top Decoration" style="width:100%; height: 180px; border-radius:10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/201/201634.png" alt="Makeup">
+        <h3>Makeup</h3>
+      </div>
+      <div class="category">
+        <img src="asses.jpg" alt="Top Decoration" style="width:100%; height: 180px; border-radius:10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/1745/1745253.png" alt="Accessories">
+        <h3>Accessories</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup Forms -->
+  <div class="overlay" id="overlay" onclick="closeForm()"></div>
+
+  <div class="popup" id="popup">
+    <h2 id="form-title"></h2>
+    <form id="form-content">
+      <!-- dynamic form here -->
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 🎀 Blooming Beauty 🎀 | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show-menu');
+    }
+  
+  function openForm(type) {
+    fetch(`${type}.html`)
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(html => {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("form-title").innerText = type.charAt(0).toUpperCase() + type.slice(1);
+        document.getElementById("form-content").innerHTML = html;
+      })
+      .catch(error => {
+        document.getElementById("form-content").innerHTML = "Sorry, content couldn't be loaded.";
+        console.error("Error loading form:", error);
+      });
+  }
+
+  function closeForm() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  }
+</script>
+
+
+  
+</body>
+
+</html>
