@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Values</title>
+</head>
+<body>
+
+<h2>User Form</h2>
+
+<form id="userForm">
+    First Name: <input type="text" id="fname"><br><br>
+    Last Name: <input type="text" id="lname"><br><br>
+    Contact No.: <input type="text" id="contact"><br><br>
+    Email ID: <input type="email" id="email"><br><br>
+    <button type="button" onclick="printValues()">Submit</button>
+</form>
+
+<h3>Form Values:</h3>
+<p id="output"></p>
+
+<script>
+function printValues() {
+    var firstName = document.getElementById("fname").value;
+    var lastName = document.getElementById("lname").value;
+    var contactNo = document.getElementById("contact").value;
+    var emailId = document.getElementById("email").value;
+    
+    var output = "First Name: " + firstName + "<br>" +
+                 "Last Name: " + lastName + "<br>" +
+                 "Contact No.: " + contactNo + "<br>" +
+                 "Email ID: " + emailId;
+    
+    document.getElementById("output").innerHTML = output;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Highlight Bold Words</title>
+</head>
+<body style="background-color: black; color: white;">
+
+<h3>
+    <a href="#" style="color: rgb(199, 75, 75);" onmouseover="highlightBold()">On mouse over here bold words of the following paragraph will be highlighted</a>
+</h3>
+
+<p>
+    We have just started this section for the users (<b>beginner</b> to intermediate) who want to work with <b>various</b> JavaScript <b>problems</b> and write scripts online to <b>test</b> their JavaScript <b>skill</b>.
+</p>
+
+<script>
+function highlightBold() {
+    var boldWords = document.getElementsByTagName('b');
+    for(var i = 0; i < boldWords.length; i++) {
+        boldWords[i].style.color = "lightgreen";
+    }
+}
+</script>
+
+</body>
+</html>
