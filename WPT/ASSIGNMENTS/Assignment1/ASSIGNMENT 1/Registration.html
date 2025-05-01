@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><strong>Student Registration Form</strong></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('imgbacg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+form {
+    background-image: linear-gradient(rgba(218, 210, 121, 0.955), rgba(212, 208, 211, 0.8)), 
+    url("images.jpg");
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+    h2 {
+      text-align: center;
+      color: #0277bd;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"], input[type="email"], input[type="url"], input[type="file"],
+    textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: 60px;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .btn-group {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      background-color: #0288d1;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #01579b;
+    }
+
+    @media screen and (max-width: 600px) {
+      form {
+        padding: 15px;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      td::before {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+      }
+
+      td:nth-of-type(1)::before { content: "Sl.No"; }
+      td:nth-of-type(2)::before { content: "Examination"; }
+      td:nth-of-type(3)::before { content: "Board"; }
+      td:nth-of-type(4)::before { content: "Percentage"; }
+      td:nth-of-type(5)::before { content: "Year of Passing"; }
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1 align: "center"><strong>Student Registration Form</strong></h1>
+
+    <label>First Name:</label>
+    <input type="text" maxlength="30" placeholder="Enter first name" required>
+
+    <label>Last Name:</label>
+    <input type="text" maxlength="30" placeholder="Enter last name" required>
+
+    <label>Date of Birth:</label>
+    <div class="dob-group">
+    <select>
+      <option>Day</option>
+      <option>01</option>
+      <option>02</option>
+      <option>03</option>
+      <option>04</option>
+      <option>05</option>
+      <option>06</option>
+      <option>07</option>
+      <option>08</option>
+      <option>09</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      <option>13</option>
+      <option>14</option>
+      <option>15</option>
+      <option>16</option>
+      <option>17</option>
+      <option>18</option>
+      <option>19</option>
+      <option>20</option>
+      <option>21</option>
+      <option>22</option>
+      <option>23</option>
+      <option>24</option>
+      <option>25</option>
+      <option>26</option>
+      <option>27</option>
+      <option>28</option>
+      <option>29</option>
+      <option>30</option>
+    </select>
+    <select>
+      <option>Month</option>
+      <option>January</option>
+      <option>February</option>
+      <option>March</option>
+      <option>April</option>
+      <option>May</option>
+      <option>June</option>
+      <option>July</option>
+      <option>August</option>
+      <option>September</option>
+      <option>October</option>
+      <option>November</option>
+      <option>December</option>
+    </select>
+    <select>
+      <option>Year</option>
+      <option>1990</option>
+      <option>1991</option>
+      <option>1992</option>
+      <option>1993</option>
+      <option>1994</option>
+      <option>1995</option>
+      <option>1996</option>
+      <option>1997</option>
+      <option>1998</option>
+      <option>1999</option>
+      <option>2000</option>
+      <option>2001</option>
+      <option>2002</option>
+      <option>2003</option>
+      <option>2004</option>
+      <option>2005</option>
+      <option>2006</option>
+      <option>2007</option>
+      <option>2008</option>
+      <option>2009</option>
+      <option>2010</option>
+      <option>2011</option>
+      <option>2012</option>
+      <option>2013</option>
+      <option>2014</option>
+      <option>2015</option>
+      <option>2016</option>
+      <option>2017</option>
+      <option>2018</option>
+      <option>2019</option>
+      <option>2020</option>
+      <option>2021</option>
+      <option>2022</option>
+      <option>2023</option>
+      <option>2024</option>
+      <option>2025</option>
+    </select>
+
+    <label>Email ID:</label>
+    <input type="email" placeholder="example@email.com" required>
+
+    <label>Mobile Number:</label>
+    <input type="text" maxlength="10" required>
+
+    <label>Upload Profile Photo:</label>
+    <input type="file" accept="image/*">
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male" required> Male
+    <input type="radio" name="gender" value="Female"> Female
+
+    <label>Address:</label>
+    <textarea placeholder="Enter your address"></textarea>
+
+    <label>City:</label>
+    <input type="text" maxlength="30">
+
+    <label>Pin Code:</label>
+    <input type="text" maxlength="6">
+
+    <label>State:</label>
+    <input type="text" maxlength="30">
+
+    <label>Country:</label>
+    <input type="text" value="India" readonly>
+
+    <label>Hobbies:</label>
+    <input type="checkbox"> Drawing
+    <input type="checkbox"> Singing
+    <input type="checkbox"> Dancing
+    <input type="checkbox"> Sketching
+    <input type="checkbox"> Others
+    <input type="text">
+
+    <label>Qualification Details:</label>
+    <table>
+      <tr>
+        <th>SR.No</th>
+        <th>Examination</th>
+        <th>Board</th>
+        <th>Percentage</th>
+        <th>Year of Passing</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Class X</td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Class XII/ Diploma</td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Graduation</td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Post Graduation</td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+      </tr>
+    </table>
+
+    <label>LinkedIn Profile:</label>
+    <input type="url" placeholder="https://linkedin.com/in/yourname">
+
+    <label>GitHub Profile:</label>
+    <input type="url" placeholder="https://github.com/yourusername">
+
+    <label>Courses Applied For:</label>
+    <input type="radio" name="course" value="PG-DAC"> PG-DAC
+    <input type="radio" name="course" value="PG DBDA"> PG-DBDA
+    <input type="radio" name="course" value="PG DIOT"> PG-DIOT
+    <input type="radio" name="course" value="PG-DESD"> PG-DESD
+    <input type="radio" name="course" value="PG-DMC"> PG-DMC
+
+    <label>Solve to Verify (Anti-Bot): What is 4 + 3?</label>
+    <input type="text" required>
+
+    <input type="checkbox" required> I accept the Terms & Conditions
+
+    <div class="btn-group">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+</body>
+</html>

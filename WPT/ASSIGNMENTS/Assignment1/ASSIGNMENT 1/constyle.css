@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contact-info {
+  width: 40%;
+  padding: 20px;
+  background: linear-gradient(to bottom left, #3f51b5, #e91e63);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+/* ✅ Social icons section */
+.social-icons {
+  margin-top: 180px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.contact-form {
+  width: 60%;
+  padding: 30px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  background-color: #68b53f;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #303f9f;
+}

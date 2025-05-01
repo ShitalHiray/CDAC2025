@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f3f4f6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main-container {
+    width: 850px;
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .welcome-box {
+    background-color: #2ecc71;
+    color: white;
+    width: 40%;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .welcome-box h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-box p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  
+  .signup-btn {
+    background-color: white;
+    color: #2ecc71;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .signup-btn:hover {
+    background-color: #eafaf1;
+  }
+  
+  .login-box {
+    width: 60%;
+    padding: 50px 40px;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    color: #333;
+  }
+  
+  form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  form label span {
+    color: red;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .signin-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .signin-btn:hover {
+    background-color: #27ae60;
+  }
+  
+  .forgot-link {
+    display: block;
+    text-align: right;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .forgot-link:hover {
+    color: #2ecc71;
+  }
+  

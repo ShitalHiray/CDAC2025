@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #e6edf3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      width: 800px;
+      height: 450px;
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-panel {
+      background-color: #2ecc71;
+      color: #fff;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .left-panel h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .left-panel p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .left-panel button {
+      background-color: #fff;
+      color: #2ecc71;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .right-panel {
+      width: 60%;
+      padding: 40px;
+    }
+
+    .right-panel h3 {
+      margin-bottom: 25px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .signin-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #2ecc71;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .forgot-password {
+      margin-top: 12px;
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      text-decoration: none;
+      color: #666;
+    }
+
+    .forgot-password:hover {
+      color: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <h2>Welcome!</h2>
+      <p>Create your account.<br>For Free!</p>
+      <button>Sign Up</button>
+    </div>
+    <div class="right-panel">
+      <h3>Login</h3>
+      <form>
+        <div class="form-group">
+          <label for="email">Username / Email address <span style="color:red">*</span></label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password <span style="color:red">*</span></label>
+          <input type="password" id="password" name="password" placeholder="********" required>
+        </div>
+        <button type="submit" class="signin-btn">Sign In</button>
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
