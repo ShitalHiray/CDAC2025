@@ -1,3 +1,8 @@
+/*Exercise 5: Using fetchData from Exercise 4, create another function processData that simulates processing the fetched data. 
+Chain these functions together using nested callbacks. Requirements: ● First, call fetchData. Once the response is received, pass it to processData. 
+● processData should modify the data and log the processed result.*/
+
+
 function fetchData(url, callback) {
     console.log(`Fetching data from ${url}...`);
     setTimeout(() => {
